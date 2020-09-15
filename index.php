@@ -3,28 +3,22 @@
     Visualizzare a schermo il paragrafo con la relativa lunghezza
      e sostituire la badword passata in GET con tre *. */
 
-    
-    #echo 'Testo stringa ' . '<br>' . $text . '<br>'.' lunghezza stringa '. '<br>'. strlen($text);
-
-
-
-    
     #testo
     $text='Oggi sono andato ma da qui non me ne sono andato, lui è andato via';
     #rivavo la lunghezza testo
     $textL=strlen($text);
     #prelevo valore con l'array globale
-    $valoreUrl=$_GET['name'];
+    $valoreUrl=$_GET['badword'];
     #stampo valore modificato
     $replace= str_ireplace($valoreUrl,'***',$text);
-    
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Passaggio valori</title>
 </head>
 <body>
     <div>
